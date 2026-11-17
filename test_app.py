@@ -52,3 +52,6 @@ def test_memory_is_kept(client):
 
 def test_unknown_ticket():
     assert "error" in main.get_ticket("INC9999")
+
+def test_ticket_not_found(client):
+    assert client.get("/tickets/INC9999").status_code == 404
