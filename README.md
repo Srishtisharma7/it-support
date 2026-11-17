@@ -6,7 +6,7 @@ A small prototype of an AI-powered IT support bot.
 - **LLM tool calling**: the model decides when to call `create_ticket` or `get_ticket`
 - **Conversation memory**: history is kept per `session_id`
 - **Mock ticketing** (stand-in for ServiceNow), saved in `tickets.json`
-- Error handling, logging and tests (the tests use a fake LLM, no API key needed)
+- Error handling, logging and tests (the tests use a fake LLM, no API key needed).
 
 ## Run it
 
