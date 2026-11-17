@@ -147,6 +147,13 @@ async def chat(req: ChatRequest):
 async def list_tickets():
     return _load_tickets()
 
+@app.get("/tickets/{ticket_id}")
+async def read_ticket(ticket_id: str):
+    ticket = _load_tickets().get(ticket_id)
+    if ticket is None:
+        raise HTTPException(status_code=404, detail="Ticket not found")
+    return ticket
+
 
 @app.get("/health")
 async def health():
